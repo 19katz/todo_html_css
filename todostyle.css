@@ -1,0 +1,176 @@
+/* Style the header. This refers to all elements with class header
+in index.html */
+.header {
+    background-color: #89cff0;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Style for the body. This refers to all elements 
+wrapped in the HTML body of index.html. */
+body {
+  margin: 5;
+  min-width: 250px;
+  font-family: 'Helvetica';
+}
+
+/* Includes the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Add some extra padding around headers */
+h2 {
+    padding: 10px;
+}
+
+/* Set margins and padding for the list to be 0 */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items:
+set the type of cursor, allow the list items to be positioned
+relative to the nearest anchored elements.
+set font size and background color.
+prevents list items from being selected.
+*/
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background:#eee;
+    font-size: 18px;
+    transition: 0.2s;
+    color: #152238;
+    
+    /* Prevents user from selecting list items (clicking
+    will be used to check and uncheck items)
+    */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* On hover, make the background color darker.
+  
+  This makes it clear that the user is meant to select
+  the items on their checklist to check off.
+  */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* Change background and text colors when checked off.
+  This is styling created for list elements in the "checked"
+  class. This class is used in the JavaScript portion of
+  the code to check off clicked-on list items.
+  */
+  ul li.checked {
+    background: #89cff0;
+    color: #eee;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on.
+  To create a checkmark, create an element that is a rectangle
+  with only two visible borders. Then, rotate the rectangle 45
+  degrees so that it looks like a checkmark.
+
+  The "before" keyword inserts this before every list element
+  of the checked class.
+  */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+/* Defines styles for the close button, which
+is also defined using JS in the scripts section of
+index.html.
+
+In addition to adding/checking off to-dos, users
+can also delete them when they no longer want to
+see them.
+
+*/
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+/* Determines style change when hovering over the close
+button. */
+.close:hover {
+    color:#ff0000;
+}
+
+/* This gives padding and other style elements, such as
+margins and font size, to the input box.
+
+The keyword "float: left" allows the input and add button
+to be displayed side by side, rahter than on top of each other.
+*/
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+  
+/* Style the "Add" button 
+
+The keyword "float: left" allows the input and add button
+to be displayed side by side, rahter than on top of each other.
+*/
+.addBtn {
+    padding: 10px;
+    width: 15%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+/* Makes the add button darker on hover to show that
+it is clickable.*/
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+/* Clear floats after the header.
+
+input and addBtn were made to be floating elements (so that
+they could be displayed next to each other).
+
+This addition forces the element (in this case, header)
+to extend past the end of the floating elements with in it
+(in this case, input and addBtn).
+*/
+.header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
