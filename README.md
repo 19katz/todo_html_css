@@ -16,9 +16,9 @@ Experiment with the interface!
 
 This code was created with elements from the following tutorials: 
 
-[W3Schools Tutorial](https://www.w3schools.com/howto/howto_js_todolist.asp)
-[Medium Tutorial](https://medium.com/clarusway/making-a-todo-list-with-html-css-and-javascript-154839b770b6)
+* [W3Schools Tutorial](https://www.w3schools.com/howto/howto_js_todolist.asp)
+* [Medium Tutorial](https://medium.com/clarusway/making-a-todo-list-with-html-css-and-javascript-154839b770b6)
 
-The additional functionality of a counter was created with help from [this StackExchange question](https://stackoverflow.com/questions/30035932/how-do-i-use-this-javascript-variable-in-html)
+The additional functionality of a counter was created with help from [this StackExchange question](https://stackoverflow.com/questions/30035932/how-do-i-use-this-javascript-variable-in-html).
 
 
