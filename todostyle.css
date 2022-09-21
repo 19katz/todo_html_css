@@ -72,13 +72,9 @@ ul li {
   the code to check off clicked-on list items.
   */
   ul li.checked {
-    background: #90EE90;
+    background: #89cff0;
     color: #eee;
-  }
-
-  ul li.twicechecked {
-    background: #ffdd3c;
-    color: #eee;
+    text-decoration: line-through;
   }
   
   /* Add a "checked" mark when clicked on.
@@ -90,19 +86,6 @@ ul li {
   of the checked class.
   */
   ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-  }
-
-  ul li.twicechecked::before {
     content: '';
     position: absolute;
     border-color: #fff;
